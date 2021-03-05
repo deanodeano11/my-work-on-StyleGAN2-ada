@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>StyleGan2-ada - Preparing the dataset</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="Home.html">Working with StyleGan2-ada<span class="logo_colour">[wip]</span></a></h1>
+          <h2>How to set up and train a StyleGan2-ada network on a custom dataset</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li ><a href="Home.html">Home</a></li>
+          <li><a href="findDataset.html">Find Dataset</a></li>
+          <li class="selected"><a href="prepDataset.html">Prepare Dataset</a></li>
+          <li><a href="tfrecords.html">Convert to .tfrecords</a></li>
+          <li><a href="train.html">Train Network</a></li>
+          <li><a href="useTrained.html">Use Network</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="banner"></div>
+	  <div id="sidebar_container">
+
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="https://colab.research.google.com/drive/13U2dZstwzfwE7vyiMVyNX76wYje8cfKD?usp=sharing">My google colab notebook</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Preparing your dataset for conversion to a .tfrecords file</h1>
+        <h2>Google Colab</h2>
+        <p>So now we will need to Start working with code, i have compiled all of the code needed into an annotated colab notebook, on which all of the code can be ran.
+           Please open the note book now by clicking <a href="https://colab.research.google.com/drive/13U2dZstwzfwE7vyiMVyNX76wYje8cfKD?usp=sharing">here.</a></p>
+        <h2>Making the images the correct resolution</h2>
+        <h3>Making your images accessible on google colab</h3>
+        <p>As of right now your images are stored on your google drive in a zipped folder, innaccessible by the local machine on colab, so follow the instructions on colab to do 3 things:</p>
+        <ol>
+          <li>Mount your Google drive to the colab virtual machine, so its files can be accessed</li>
+          <li>Copy your zipped dataset from your google drive to the virtual machine</li>
+          <li>Unzip the dataset once it is on the virtual machine</li>
+        </ol>
+        <h3>Running the code</h3>
+        <ul>
+          <li>As mentioned before resolution of the images has to be a power of two, with identical height and width for example: 64x64,128x128,256x256 etc.</li>
+          <li>If your images are already in that format then you can skip this section of the guide</li>
+          <li>However in my cats and dogs example all of the images are not square</li>
+          <li>We must identify what power of 2 the images resoltions are all lower than, in my case all of the images are less than 512x512 in size so this will be my target resolution </li>
+          <li>We will be using python along with the PIL module to resize and pad them. </li>
+          <li>The code that i will provide on colab will use PIL to convert your images like so:</li>
+        </ul>
+        <img src="style/dog comparison.png" alt="Before" height="200" width="600" />
+		    <p>The code + instructions on how to use are all on the colab page</p>
+        <h2>How do i commence training using these images?</h2>
+        <p>All of your images are now nicely formatted and ready to go. However StyleGAN2-ada cannot simply read in images, it reads in files of a special file type called .tfrecords, more info on this can be found in the blog post.</p>
+        <p>Proceed to the next page on how to convert to .tfrecords by clicking <a href="tfrecords.html">here</a></p>
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p>Copyright &copy; simplestyle_horizon | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Simple web templates by HTML5</a></p>
+    </div>
+  </div>
+</body>
+</html>

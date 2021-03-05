@@ -54,19 +54,19 @@
     <h1>Introduction</h1>
 		<h2>What will I learn from this guide?</h2>
 		<p>This guide will take you through the basics of how to find your dataset and then using the dataset to train the network.
-		The actual training aspect will be done on google colab which essentially gives us a free virtual environment to train the network on (so no need to worry about computing power)</p>
+       From this trained network we can then produce new images which theoretically look like those in the dataset provided, in my case i aimed to produce a new image of a dog.
+    </p>
+		<p>All of the execution of code will be done on google colab which essentially gives us a free virtual environment to train the network on (so no need to worry about computing power).
+    for more information on google colab please check out my blog post.</p>
     <h2>What is StyleGan?</h2>
-    <p>StyleGan itself is a generative adversarial network (GAN) which was brought forward from Nvidia researchers in December 2018, the Wikipedia page can be found <a href="https://en.wikipedia.org/wiki/StyleGAN">here</a>
-		and a brilliant video explaining GANs can be found <a href="https://www.youtube.com/watch?v=Sw9r8CL98N0">here</a> </p>
-		<h2>How does StyleGan2-ada differ?</h2>
-        <p>StyleGan2-ada boasts many improvements over StyleGan2 these include:
-			<ul>
-              <li>Significantly better results for datasets with less than 30k training images.</li>
-              <li>Mixed precision support meaning ~1.6x faster training, ~1.3x faster inference, ~1.5x lower GPU memory consumption.</li>
-              <li>A cleaner codebase which is therefore easier to work with.</li>
-            </ul>
-			The github page for StyleGan2-ada can be found <a href="https://github.com/NVlabs/stylegan2-ada">here</a>
+    <p>StyleGan itself is a generative adversarial network (GAN) which was brought forward from Nvidia researchers in December 2018,
+      for more information on StyleGAN2-ada please check out my blog post.
 		</p>
+    <h2>What have can be produced?</h2>
+    <p>So far i have been able to produce my own <i>'dog'</i> images. With further training and refining they could look much more realistic.</p>
+    <img src="style/dogattempt1.png" alt="Scarydog" height="300" width="300" />
+    <img src="style/dogattempt2.jpg" alt="Scarydog2" height="300" width="300" />
+        <p>While i have chosen to use a dataset of dogs, you could generate new images of anything you like, so long as a related dataset exists.</p>
         <h2>How do I train my own StyleGan2-ada network?</h2>
         <p>There are 5 main steps, these are:
           <ol>

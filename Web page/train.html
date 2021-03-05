@@ -41,7 +41,7 @@
           <div class="sidebar_item">
             <h3>Useful Links</h3>
             <ul>
-
+                <li>  <a href="https://colab.research.google.com/drive/13U2dZstwzfwE7vyiMVyNX76wYje8cfKD?usp=sharing">My google colab notebook</a></li>
             </ul>
           </div>
           <div class="sidebar_base"></div>
@@ -49,7 +49,19 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-          <img src="style/wip.jpg" alt="Under Construction" height="500" width="600" />
+          <h1>Training your network using transfer learning</h1>
+          <p>Transfer Learning is the process of using a pretrained network and training it upon your dataset, for more information on why we use it please check out my blog post</p>
+          <h2>Selecting which pretrained network to use</h2>
+          <p>The main thing to keep in mind is that the resolutions of the pretrained model and of your images need to be the same so:</p>
+          <p>If your dataset is 256x256 you should use --resume lsundog256, if it is 512x512 or 1024x1024 you should use --resume ffhq512 / ffhq1024 respectively</p>
+          <p>If your dataset does not fit any of these resolutions then you will have to import a custom pretrained model, i recommend <a href="https://www.analyticsvidhya.com/blog/2020/12/training-stylegan-using-transfer-learning-on-a-custom-dataset-in-google-colaboratory/">this guide.</a> </p>
+          <h2>Running the code</h2>
+          <p>After selecting the appropriate pretrained model and setting --resume, you should run through the rest of the settings which are explained on colab and ensure that you understand them. The default settings should work for most cases.</p>
+          <p>Once everything is configured simply set the path variables appropriately and run the cell, this will probably take a long time. Ensure you follow the information on how to make sure the session stays connected</p>
+          <p>After the transfer learning has completed you will be left with your trained networks pkl files and some sample false images</p>
+          <h2>Further Training</h2>
+          <p>After this training you can proceed to the cells below for further training, they can automatically resume from the pkl produced but you need to specify details in log.txt</p>
+          <p>[Incomplete] Proceed to the next page on how to then use the network to generate more images than the initail fakes <a href="useTrained.html">here</a></p>
       </div>
     </div>
     <div id="content_footer"></div>

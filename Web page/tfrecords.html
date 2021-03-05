@@ -41,9 +41,7 @@
           <div class="sidebar_item">
             <h3>Useful Links</h3>
             <ul>
-              <li><a href="https://towardsdatascience.com/tfrecords-explained-24b8f2133282">Article explaining .tfrecords</a></li>
-              <li><a href="https://androidkt.com/convert-tfrecords/">Main article followed</a></li>
-              <li></li>
+              <li><a href="https://colab.research.google.com/drive/13U2dZstwzfwE7vyiMVyNX76wYje8cfKD?usp=sharing">My google colab notebook</a></li>
             </ul>
           </div>
           <div class="sidebar_base"></div>
@@ -52,20 +50,17 @@
       <div id="content">
         <!-- insert the page content here -->
         <h1>Converting your dataset to .tfrecords</h1>
-        <p>.tfrecords is the file format which StyleGAN is able to read, you can find more information on it <a href="https://towardsdatascience.com/tfrecords-explained-24b8f2133282">here</a></p>
-        <h2>Conversion from training set and validation set folders</h2>
-        <p>We will mainly be following the tutorial shown on the previous page found <a href="https://androidkt.com/convert-tfrecords/">here</a></p>
-        <p>I will provide a summary of what we need to do:</p>
+        <p>After following the preparing your dataset instructions, conversion to .tfrecords is very easy.
+           Note that the conversion process may take a few hours.</p>
+        <p>Simply follow these steps:</p>
         <ol>
-          <li>Put the code from <a href="https://github.com/tensorflow/models/blob/f87a58cd96d45de73c9a8330a06b2ab56749a7fa/research/inception/inception/data/build_image_data.py">this link</a> into a python idle instance and save it as builder.py</li>
-          <li>Install NumPy <a href="https://numpy.org/install/">here</a></li>
-          <li>Install Tensorflow <a href="https://www.educba.com/install-tensorflow/">here</a></li>
-          <li>Make your output folder</li>
-          <li>Set your training,validation and output directories as shown:</li>
-          <img src="style/directories.png" alt="File Structure" height="75" width="600" />
-          <li>Finally run the program and your .tfrecords file, along with your labels file will be generated</li>
+          <li>Set your custom_dataset parameter to be the path of the folder created.</li>
+          <li>Set your custom_images parameter to be the path of your formatted dataset.</li>
+          <li>Run the cell to set those two variables</li>
+          <li>Run the next cell to begin training</li>
         </ol>
-		<p>The Train and use network sections are currently empty but i hope the guide so far has helped</p>
+        <p>Once the conversion has completed utilise the cell titled "archive prepared datasets to google drive" to save your tf records to your google drive so they are not lost when the session is disconnected.</p>
+		    <p>Proceed to the next page on how to train using transfer learning by clicking <a href="train.html">here</a></p>
       </div>
     </div>
     <div id="content_footer"></div>
