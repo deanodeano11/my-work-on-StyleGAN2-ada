@@ -1,0 +1,5 @@
+This folder simply has a copy of train.py from stylegan2-ada
+When trying to run the train.py which was cloned directly from the stylegan2-ada folder
+for some reason there was a missing piece of code which made it so i couldnt run it
+so the clunky fix that i had to use is to simply replace the broken train.py with a fixed one
+(i.e the one in this folder)
