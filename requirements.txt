@@ -1,0 +1,6 @@
+There are very few requirements, the main important thing that you will need is a google account
+and a stable internet connection, a connection to google drive and google colab is needed in order
+to produce results from my work in the way that i did.
+
+However if you have your own Nvidia graphics card and are willing to do your own research it would
+be possible to do this work on your own computer
